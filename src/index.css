@@ -1,3 +1,75 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  background: #01130a;
+  font-family: "Kanit", sans-serif;
+}
+.custom-bg-1 {
+  background-image: linear-gradient(86deg, #26f077 2.06%, #1cb659 96.6%);
+  box-shadow: 1px 1px 15px 0px #0f9545;
+  transition: 0.5s;
+}
+.custom-bg-1:hover {
+  background-image: linear-gradient(86deg, #26f077 2.06%, #165d8d 96.6%);
+  box-shadow: 1px 1px 15px 2px #0f9545;
+  color: black;
+}
+
+/* nav */
+.nav-link:focus {
+  display: block;
+  color: white;
+  transform: scale(1.2);
+}
+.nav-link {
+  position: relative;
+  transition: 0.5s;
+}
+.nav-link:hover {
+  /* display: block;
+  transform: scale(1.5); */
+  transition: 0.5s;
+  color: white;
+}
+li {
+  position: relative;
+  transition: all 0.5s;
+}
+/* li:hover {
+  transform: scale(1.1);
+} */
+li::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  height: 3px;
+  width: 0%;
+  transform: translateX(-50%);
+  background: linear-gradient(86deg, #26f077 2.06%, #165d8d 96.6%);
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+li:hover::after {
+  width: 100%;
+}
+
+/* sidebar */
+.sidebar {
+  transform: translateX(-100%);
+  transition: 0.5s;
+}
+.sidebar.open {
+  transform: translateX(0%);
+}
+
+/*  -------------------------------------- Hero ----------------------------------- */
+.hero-text-shadow {
+  text-shadow: 2px 2px 0px transparent, 2px 2px 0px #01130a,
+    3.5px 3.5px 0px white;
+  /* box-shadow: 2px 2px 0px #666, 4px 4px 0px #999; */
+}
